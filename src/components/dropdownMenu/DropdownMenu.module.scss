@@ -1,0 +1,63 @@
+@import '../../vars';
+
+.dropdown-menu {
+  color: $textColor;
+  padding: 0 20px;
+  position: relative;
+  transition: background-color $transitionFast;
+  user-select: none;
+
+  &:hover, &:active, &:focus {
+    background-color: $highlightColor;
+  }
+
+  &:hover, &:active, &:focus {
+    a, .dropdown-menu__icon {
+      color: $darkColor;
+    }
+  }
+
+  .dropdown-menu__text {
+    color: $textColor;
+    cursor: default;
+    transition: color $transitionFast;
+  }
+
+  .dropdown-menu__icon {
+    margin-left: 10px;
+    transition: color $transitionFast;
+  }
+
+  .dropdown-menu__items {
+    background: $darkColor;
+    box-shadow: 0 0 $shadowStyle;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transition: opacity ease-in-out 0.25s;
+
+    &.dropdown-menu__expanded {
+      opacity: 1;
+      pointer-events: inherit;
+    }
+
+    a {
+      color: $textColor;
+      display: block;
+      padding: 10px 20px;
+      transition: background-color $transitionFast, color $transitionFast;
+
+      &:hover, &:focus, &:active {
+        background-color: $highlightColor;
+      }
+
+      &:hover, &:focus, a:focus, &:active, a:active {
+        color: $darkColor;
+      }
+    }
+  }
+}
