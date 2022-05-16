@@ -12,6 +12,7 @@
     "lint:fix": "prettier -w \"src/**/*.{js,jsx}\"",
     "develop": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
+    "deploy-only": "gh-pages -d public -b gh-pages",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
